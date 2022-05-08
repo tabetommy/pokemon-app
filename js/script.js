@@ -13,6 +13,11 @@ let pokemonList=[
         name:"Venusaur",
         height:2,
         types:'monster'
+    },
+    {
+        name:"Charmander",
+        height:2.5,
+        types:'Lizard'
     }
 ];
 
