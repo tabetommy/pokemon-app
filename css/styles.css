@@ -1,0 +1,20 @@
+.btn-class{
+	background-color: transparent;
+	padding: 5px 8px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+li{
+	list-style: none;
+	background-color: skyblue;
+	margin: 15px auto;
+	padding: 10px 0;
+	width: 50%;
+	text-align: center;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 3px 3px 7px 2px lightblue;
+
+ }

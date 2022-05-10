@@ -39,7 +39,9 @@ let pokemonRepository=(
       return false;
     }
 
-    //declaration of public functions && Object.keys(newPokemon).length===3 
+    
+
+    //declaration of public functions  
     function getAll(){
         return pokemonList
     };
@@ -51,13 +53,34 @@ let pokemonRepository=(
         }else{
             console.log('Input is not an object or it\'s not equal to the object key properties of pokemonList.' )
         }   
+    };
+
+    function addListItem(pokemon){
+        //define pokemon name variable 
+        let name=pokemon.name;
+        //select list
+        let pokemonList= document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText=name;
+        button.classList.add('btn-class');
+        listItem.append(button);
+        pokemonList.append(listItem);
+        button.addEventListener('click',()=>{showDetails(pokemon)})
+
+    };
+
+    //function to handle click event on button in addListItem
+    function showDetails(pokemon){
+        console.log(pokemon.name)
     }
 
     
     //returning public functions
     return{
         getAll:getAll,
-        add:add
+        add:add,
+        addListItem:addListItem,
     };
 
     }
@@ -65,15 +88,6 @@ let pokemonRepository=(
 
 
 pokemonRepository.getAll().forEach(pokemon=>{
-    //define pokemon name variable
-    let name=pokemon.name;
-    //define pokemon height variable
-    let height=pokemon.height;
-    //printout pokemon name and height with a twist(adding Wow that's big for heights greater than or equal to 2)
-    if(height>=2){
-        document.write(name + '(height:' + height + ')- Wow that\'s big<br>')
-    }else{
-        document.write(name + '(height:' + height + ')<br>')
-    };
+    pokemonRepository.addListItem(pokemon)
     })
 
