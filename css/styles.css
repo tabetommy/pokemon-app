@@ -5,6 +5,8 @@
 	border: none;
 	cursor: pointer;
 	width: 100%;
+	font-weight: 600;
+	font-size: 24px;
 }
 li{
 	list-style: none;
@@ -17,4 +19,7 @@ li{
 	border: none;
 	box-shadow: 3px 3px 7px 2px lightblue;
 
+ }
+ li:hover,li:focus{
+   box-shadow: none;
  }
