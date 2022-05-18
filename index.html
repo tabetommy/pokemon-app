@@ -8,9 +8,24 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body> 
-        <div class="loader">
-            <img src="images/loadingIcon.gif" alt="loading gif">
+        <div id='modal-container'>
+            <div class='modal'>
+              <div class="modal-header">
+                  <h1>Header</h1>
+                  <button class='modal-close'>Close</button>
+              </div>
+              <div class="modal-details">
+                 <img src="https://via.placeholder.com/150" alt="pokemon Picture">
+                 <div class="modal-specifications">
+                    <p>haha</p>
+                    <p>yoyoyo</p> 
+                 </div>        
+              </div>      
+            </div>
         </div>
+        <!--<div class="loader">
+            <img src="images/loadingIcon.gif" alt="loading gif">
+        </div>-->
         <ul class='pokemon-container'></ul>
         <script src="js/promisePolyfill.js"></script>  
         <script src="js/fetch.umd.js"></script>
