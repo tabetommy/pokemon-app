@@ -1,7 +1,7 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
 //   let loader = document.querySelector('.loader');
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=90';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=60';
 
   /* function showLoadingMessage(){
         loader.classList.add('showLoading');
