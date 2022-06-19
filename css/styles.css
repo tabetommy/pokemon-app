@@ -1,3 +1,20 @@
+.load{
+    position: fixed;
+	  width: 100vw;
+	  height: 100vh;
+	  z-index:  999999;
+	  background-color: white;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+
+	  
+}
+
+.load.hide{
+	display: none;
+}
+
 form{
 	border-bottom: #ABAEB2 2px solid;
 }

@@ -1,17 +1,17 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-//   let loader = document.querySelector('.loader');
+  // let loader = document.querySelector('.loader');
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=60';
 
-  /* function showLoadingMessage(){
-        loader.classList.add('showLoading');
-        pokemonContainer.style.display = "none";
-    };
+   // function showLoadingMessage(){
+   //       const loadingMessage = document.querySelector('.load');
+   //       setTimeout(loadingMessage.classList.add('hide'),15000);
+   //  }
 
     function hideLoadingMessage(){
-        loader.classList.add('hideLoading');
-        pokemonContainer.style.display = "grid";
-    };*/
+        const loadingMessage = document.querySelector('.load');
+        loadingMessage.classList.add('hide')   
+    };
 
   // push pokemons from loadlist into pokemonList var
   function add(newPokemon) {
@@ -34,12 +34,11 @@ let pokemonRepository = (function () {
           };
           //add pushes pokemon into pokemonList
           add(pokemon);
-          //hideLoadingMessage();
+          hideLoadingMessage();
         });
       })
       .catch(function (e) {
         console.error(e);
-        //hideLoadingMessage();
       });
   }
 
@@ -113,7 +112,7 @@ let pokemonRepository = (function () {
     addListItem: addListItem,
     loadList: loadList,
     loadDetails: loadDetails,
-    // myFunction:myFunction
+   
   };
 })();
 
@@ -142,3 +141,5 @@ function searchFunction(event) {
 }
 
 search.addEventListener('keyup', searchFunction);
+
+
