@@ -1,12 +1,6 @@
-let pokemonRepository = (function () {
-  let pokemonList = [];
-  // let loader = document.querySelector('.loader');
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=60';
-
-   // function showLoadingMessage(){
-   //       const loadingMessage = document.querySelector('.load');
-   //       setTimeout(loadingMessage.classList.add('hide'),15000);
-   //  }
+const pokemonRepository = (function () {
+  const pokemonList = [];
+  const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=60';
 
     function hideLoadingMessage(){
         const loadingMessage = document.querySelector('.load');
@@ -20,7 +14,6 @@ let pokemonRepository = (function () {
 
   // populate pokemonList array
   function loadList() {
-    // showLoadingMessage();
     return fetch(apiUrl)
       .then(function (response) {
         return response.json();
@@ -45,10 +38,10 @@ let pokemonRepository = (function () {
   //function to handle click event on button in addListItem
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      let name = pokemon.name;
-      let height = pokemon.height;
-      let type = pokemon.types[0].type.name;
-      let imageUrl = pokemon.imageUrl;
+      const name = pokemon.name;
+      const height = pokemon.height;
+      const type = pokemon.types[0].type.name;
+      const imageUrl = pokemon.imageUrl;
       loadModal(name, height, type, imageUrl);
     });
   }
@@ -56,10 +49,10 @@ let pokemonRepository = (function () {
   //pass data to modal dynamically
   function loadModal(name, height, type, imageUrl) {
     //selecting html modal elements
-    let exampleModalLabel = document.querySelector('#exampleModalLabel');
-    let pokemonImg = document.querySelector('#image');
-    let pokemonHeight = document.querySelector('#height');
-    let pokemonType = document.querySelector('#type');
+    const exampleModalLabel = document.querySelector('#exampleModalLabel');
+    const pokemonImg = document.querySelector('#image');
+    const pokemonHeight = document.querySelector('#height');
+    const pokemonType = document.querySelector('#type');
 
     exampleModalLabel.innerText = name;
     pokemonImg.src = imageUrl;
@@ -69,7 +62,7 @@ let pokemonRepository = (function () {
 
   // fetches pokemon details from the details url and assigns it to an object item
   function loadDetails(item) {
-    let url = item.detailsUrl;
+    const url = item.detailsUrl;
     return fetch(url)
       .then(function (response) {
         return response.json();
@@ -91,9 +84,9 @@ let pokemonRepository = (function () {
 
   //creates and renders a div containing pokemon on the dom
   function addListItem(pokemon) {
-    let pokemonContainer = document.querySelector('#pokemon-container');
-    let pokemonDiv = document.querySelector('#pokemon-div');
-    let button = document.createElement('button');
+    const pokemonContainer = document.querySelector('#pokemon-container');
+    const pokemonDiv = document.querySelector('#pokemon-div');
+    const button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('pokemon-name');
     button.setAttribute('data-toggle', 'modal');
@@ -130,7 +123,7 @@ function searchFunction(event) {
   const { value } = event.target;
   const searchQuery = value.toLowerCase();
   for (const pokemonName of pokemonNames) {
-    let name = pokemonName.textContent.toLowerCase();
+    const name = pokemonName.textContent.toLowerCase();
     //show if searchQuery is contained in name of pokemon within button
     if (name.includes(searchQuery)) {
       pokemonName.style.display = 'block';

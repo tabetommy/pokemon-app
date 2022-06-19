@@ -2,7 +2,7 @@
     position: fixed;
 	  width: 100vw;
 	  height: 100vh;
-	  z-index:  999999;
+	  z-index:  999;
 	  background-color: white;
 	  display: flex;
 	  justify-content: center;
@@ -15,8 +15,15 @@
 	display: none;
 }
 
-form{
+.header{
 	border-bottom: #ABAEB2 2px solid;
+	position: sticky;
+  top: 0px;
+  background-color: #fff;
+}
+.header-logo{
+	font-family: 'Bungee Shade', cursive;
+	font-size: 24px;
 }
 input{
 	background-color: #f8f8ff;
