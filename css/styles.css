@@ -25,6 +25,11 @@
 	font-family: 'Bungee Shade', cursive;
 	font-size: 24px;
 }
+
+.header-about{
+	font-size: 20px;
+	font-weight: 500;
+}
 input{
 	background-color: #f8f8ff;
 	border: none;

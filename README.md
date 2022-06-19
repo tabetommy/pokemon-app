@@ -4,38 +4,22 @@
 
 ## About
 
-Pokemon-app displays pokemons fetched from the [pokeApi](https://pokeapi.co/). When clicked, each pokemon element displays futher details about the particular pokemon by use of a modal.
+Pokemon-app loads and displays pokemons fetched from the [pokeApi](https://pokeapi.co/). Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
 
 ## Built With
 
 - HTML,CSS & Javascript
 - Bootstrap
-- technologies used
 
 ## Live Demo
 
 [Live Demo Link](https://tabetommy.github.io/pokemon-app/)
 
-## Getting Started
+## Lessons learned
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+- During this project i learnt how to use the fetch API to load data from eternal APIs
+- I also learnt how to use IIFEs(immediately invoked function expressions) to isolate variable declarations
 
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-## Authors
 
 👤 **Author1**
 
@@ -52,12 +36,3 @@ Feel free to check the [issues page](issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
